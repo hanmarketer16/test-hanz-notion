@@ -1,26 +1,26 @@
 export default {
   // the site's root Notion page (required)
-  rootNotionPageId: 'ff1a3cae900941e49cc4d4458cc2867d',
+  rootNotionPageId: '682c2dfd932c4b84b335acbb8ac38f3c',
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
-  rootNotionSpaceId: '684fb1cf-ad2b-40c7-8e31-c099fa61e45f',
+  // rootNotionSpaceId: '684fb1cf-ad2b-40c7-8e31-c099fa61e45f',
 
   // basic site info (required)
-  name: 'Ubiquity DAO Hub',
-  domain: 'dao.ubq.fi',
-  author: 'Ubiquity DAO',
+  name: 'Adem Net',
+  domain: 'ss',
+  author: 'Hanz',
 
-  // open graph metadata (optional)
-  description: 'Ubiquity DAO Contributors Hub',
-  socialImageTitle: 'Ubiquity DAO Contributors Hub',
-  socialImageSubtitle: 'Hello World! 👋',
+  // // open graph metadata (optional)
+  // description: 'Ubiquity DAO Contributors Hub',
+  // socialImageTitle: 'Ubiquity DAO Contributors Hub',
+  // socialImageSubtitle: 'Hello World! 👋',
 
-  // social usernames (optional)
-  twitter: 'UbiquityDAO',
-  github: 'ubiquity',
-  discord: 'SjymJ5maJ4',
-  telegram: 'UbiquityDAO',
-  // linkedin: 'fisch2',
+  // // social usernames (optional)
+  // twitter: 'UbiquityDAO',
+  // github: 'ubiquity',
+  // discord: 'SjymJ5maJ4',
+  // telegram: 'UbiquityDAO',
+  // // linkedin: 'fisch2',
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
