@@ -229,7 +229,7 @@ body.light-mode img {
   width: 100%;
   opacity: 0.25;
   margin: auto;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
   text-align: right;
   max-width: 640px;
   padding: 78px;
@@ -568,7 +568,6 @@ body.dark-mode
 }
 
 .notion-page-icon {
-  filter: grayscale(1);
   transition: 0.125s all ease-in-out;
 }
 
