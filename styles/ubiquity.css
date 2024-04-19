@@ -438,7 +438,7 @@ svg.notion-page-icon {
   > div
   > div.breadcrumbs
   > *:nth-child(1) {
-  background-image: var(--ubiquity-logo-black);
+  /* background-image: var(--ubiquity-logo-black); */
   background-repeat: no-repeat;
   background-size: contain;
   color: #000;
