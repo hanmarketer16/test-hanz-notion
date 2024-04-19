@@ -24,71 +24,8 @@ export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
             <div>
               <h1>Sorry!</h1>
               <p>{errorText}</p>
-              <p>
-                <b>Here are some helpful links instead:</b>
-              </p>
-              <ul>
-                <li>
-                  <a
-                    className='notion-page-link'
-                    href='//github.com/ubiquity/ubiquity-dollar/wiki'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Docs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className='notion-page-link'
-                    href='//dao.ubq.fi/faq'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className='notion-page-link'
-                    href='//github.com/ubiquity/ubiquity-dollar'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Github
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className='notion-page-link'
-                    href='//discord.gg/SjymJ5maJ4'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Discord
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className='notion-page-link'
-                    href='//t.me/ubiquitydao'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Telegram
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className='notion-page-link'
-                    href='//twitter.com/UbiquityDAO'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Twitter
-                  </a>
-                </li>
-              </ul>
+             
+             
             </div>
             <div>
               <h1>404</h1>

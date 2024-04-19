@@ -7,7 +7,7 @@ export default {
 
   // basic site info (required)
   name: 'Adem Net',
-  domain: 'ss',
+  domain: 'test-hanz-notion.vercel.app',
   author: 'Hanz',
 
   // // open graph metadata (optional)
