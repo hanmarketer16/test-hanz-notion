@@ -463,6 +463,147 @@
 .notion-page.notion-page-has-cover.notion-page-has-icon.notion-page-has-text-icon.notion-full-page {
   margin-top: 1.7rem;
 }
+.menu-bottom {
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: block;
+}
+.menav-card-container {
+  max-width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+.mebot-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 1px;
+}
+.mev1 {
+  background-color: var(--warna_1);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+.mebot-card .mev1:hover {
+  background-color: var(--warna_2);
+}
+.mev2 {
+  width: 100%;
+  position: relative;
+}
+.mev-container {
+  -webkit-transition: background .3s, border .3s, -webkit-border-radius .3s, -webkit-box-shadow .3s;
+  transition: background .3s, border .3s, -webkit-border-radius .3s, -webkit-box-shadow .3s;
+  -o-transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+  transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+  transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-border-radius .3s, -webkit-box-shadow .3s;
+}
+.navicon-bottom {
+  margin-bottom: 15px;
+}
+.navtext-bottom {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.navconbot {
+  fill: #FFFFFF;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+.navconbot i {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  display: block;
+  transform: rotate(0deg);
+}
+.navconbot i:before {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.fa-arrow-circle-left:before {
+  content: "\f0a8";
+}
+.navtitlebot {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.navtitlebot a {
+  font-weight: 700;
+  color: inherit;
+}
+@media (max-width: 1024px) {
+  .menav-card-container {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      max-width: 1024px;
+  }
+  .mev-container {
+    padding: 15px 15px 15px 15px;
+  }
+  .navconbot {
+    font-size: 24px;
+  }
+  .navtitlebot,
+  .navtitlebot a {
+    font-size: 34px;
+  }
+}
+@media (max-width: 767px) {
+  .menu-bottom {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding: 0px 0px 0px 0px;
+  }
+  .menav-card-container {
+    max-width: 767px;
+  }
+  .mebot-card {
+    width: 33%;
+  }
+  .mev1 {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 15px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .mev-container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+  .navicon-bottom {
+    margin-bottom: 0px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .navconbot {
+    font-size: 24px;
+  }
+  .navtitlebot,
+  .navtitlebot a {
+    font-size: 10px;
+  }
+}
 @media (max-width: 640px) {
   .notion-page-content-inner .notion-row .notion-column {
     display: grid;

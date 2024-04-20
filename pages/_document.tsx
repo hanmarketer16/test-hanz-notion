@@ -22,7 +22,32 @@ export default class MyDocument extends Document {
 
           <body>
 
-            <section className="menu-bottom"></section>
+            <section className="menu-bottom">
+              <div className="menav-card-container">
+                <div className="mebot-card">
+                  <div className="mev1">
+                    <div className="mev2">
+                      <div className="mev-container">
+                        <div className="text-center">
+                          <div className="navicon-bottom">
+                            <a className="navconbot" href="">
+                              <i aria-hidden="true" class="fas fa-arrow-circle-left"></i>
+                            </a>
+                          </div>
+                          <div className="navtext-bottom">
+                            <h3 class="navtitlebot">
+                                <a href="#">Back</a>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mebot-card"></div>
+                <div className="mebot-card"></div>
+              </div>
+            </section>
 
             <script
               dangerouslySetInnerHTML={{
