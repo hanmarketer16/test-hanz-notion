@@ -565,7 +565,7 @@
   font-size: 10px;
 }
 .notion-page.notion-page-has-cover.notion-page-has-icon.notion-page-has-text-icon.notion-full-page .notion-title {
-  padding-top: 2rem;
+  padding-top: 4.5rem;
 }
 .notion-collection-page-properties {
   display: none !important;

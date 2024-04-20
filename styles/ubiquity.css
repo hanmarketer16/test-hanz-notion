@@ -1009,7 +1009,7 @@ video.notion-page-cover {
 }
 
 .notion-page-has-cover .notion-page-icon-hero.notion-page-icon-span {
-  top: 0;
+  top: 30px;
   pointer-events: none;
   opacity: 0.25;
 }
