@@ -433,6 +433,9 @@
 .notion-h.notion-h1 {
   text-align: center;
 }
+.notion-h.notion-h1.notion-h-indent-0.notion-block-d8fcc483b19a46fa9393bb8aba25ed18 {
+  text-align: start;
+}
 .notion-hash-link {
   display: none;
 }
