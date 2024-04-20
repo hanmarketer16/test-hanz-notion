@@ -439,6 +439,21 @@
 .notion-hash-link {
   display: none;
 }
+.notion-list-body {
+  gap: 6px;
+}
+.notion-list-body .notion-list-item.notion-page-link {
+  width: 100%;
+  padding: 5px 5px 5px 5px;
+}
+.notion-list-body .notion-list-item .notion-list-item-title .notion-property .notion-page-link .notion-page-title {
+  gap: 5px;
+}
+.notion-list-body .notion-list-item .notion-list-item-title .notion-property .notion-page-link .notion-page-title .notion-page-icon-inline {
+  position: relative;
+  height: 0;
+  width: 0;
+}
 @media (max-width: 640px) {
   .notion-page-content-inner .notion-row .notion-column {
     display: grid;
