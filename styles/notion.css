@@ -485,7 +485,6 @@
   display: -ms-flexbox;
   display: flex;
   min-height: 1px;
-  width: 100%;
   text-align: center;
 }
 .mev1 {
@@ -495,7 +494,7 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: auto;
+  width: 100%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-line-pack: start;
@@ -566,9 +565,6 @@
       margin-top: 0px;
       margin-bottom: 0px;
       padding: 0px 0px 0px 0px;
-  }
-  .mebot-card {
-    width: 33%;
   }
   .mev1 {
     margin: 0px 0px 0px 0px;
