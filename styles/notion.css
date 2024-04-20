@@ -446,10 +446,14 @@
   width: 100%;
   padding: 5px 5px 5px 5px;
 }
-.notion-list-body .notion-list-item .notion-list-item-title .notion-property .notion-page-link .notion-page-title {
+.notion-list-body .notion-list-item.notion-page-link .notion-list-item-title .notion-property .notion-page-link {
+  width: 100%;
+  padding: 5px;
+}
+.notion-list-body .notion-list-item.notion-page-link .notion-list-item-title .notion-property .notion-page-link .notion-page-title {
   gap: 5px;
 }
-.notion-list-body .notion-list-item .notion-list-item-title .notion-property .notion-page-link .notion-page-title .notion-page-icon-inline {
+.notion-list-body .notion-list-item.notion-page-link .notion-list-item-title .notion-property .notion-page-link .notion-page-title .notion-page-icon-inline {
   position: relative;
   height: 0;
   width: 0;

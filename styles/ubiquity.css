@@ -612,7 +612,7 @@ path[d='M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V
   letter-spacing: 1px;
   opacity: 1;
   vertical-align: top;
-  width: calc(50% - 8px);
+  width: 100%;
   height: auto;
   box-shadow: 0 0 48px #00000010;
 }
