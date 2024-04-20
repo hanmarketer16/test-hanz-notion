@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
                             </a>
                           </div>
                           <div className="navtext-bottom">
-                            <h3 class="navtitlebot">
+                            <h3 className="navtitlebot">
                                 <a href="#">Back</a>
                             </h3>
                           </div>
