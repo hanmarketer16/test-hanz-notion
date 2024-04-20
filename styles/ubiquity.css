@@ -166,7 +166,7 @@ details.notion-toggle:hover {
   .notion-page {
     padding: 16px;
     width: 100%;
-    min-width: 320px;
+    min-width: 100%;
   }
 }
 
@@ -678,7 +678,7 @@ div.notion-page-content a.notion-page-link::after {
     width: calc(100% - 8px);
   }
   .notion-page {
-    min-width: 320px;
+    min-width: 100%;
   }
   #__next
     > div
