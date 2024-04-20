@@ -469,6 +469,9 @@
   bottom: 0;
   width: 100%;
   display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px 0px 0px 0px;
 }
 .menav-card-container {
   max-width: 100%;
@@ -478,6 +481,8 @@
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
 .mebot-card {
   position: relative;
@@ -501,6 +506,10 @@
   -ms-flex-line-pack: start;
   align-content: flex-start;
   padding: 15px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  --e-column-margin-right: 0px;
+  --e-column-margin-left: 0px;
+  border-radius: 0px 0px 0px 0px;
 }
 .mebot-card .mev1:hover {
   background-color: var(--warna_2);
@@ -515,9 +524,12 @@
   -o-transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
   transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
   transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-border-radius .3s, -webkit-box-shadow .3s;
+  padding: 0;
 }
 .navicon-bottom {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .navtext-bottom {
   -webkit-box-flex: 1;
@@ -545,46 +557,18 @@
 .text-center {
   text-align: center;
 }
+.navconbot {
+  font-size: 24px;
+}
+.navtitlebot,
+.navtitlebot a {
+  font-size: 10px;
+}
 @media (max-width: 1024px) {
-  .mev-container {
-    padding: 15px 15px 15px 15px;
-  }
-  .navconbot {
-    font-size: 24px;
-  }
-  .navtitlebot,
-  .navtitlebot a {
-    font-size: 34px;
-  }
+
 }
 @media (max-width: 767px) {
-  .menu-bottom {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      padding: 0px 0px 0px 0px;
-  }
-  .mev1 {
-    margin: 0px 0px 0px 0px;
-    --e-column-margin-right: 0px;
-    --e-column-margin-left: 0px;
-    border-radius: 0px 0px 0px 0px;
-  }
-  .mev-container {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-  }
-  .navicon-bottom {
-    margin-bottom: 0px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  .navconbot {
-    font-size: 24px;
-  }
-  .navtitlebot,
-  .navtitlebot a {
-    font-size: 10px;
-  }
+
 }
 @media (max-width: 640px) {
   .notion-page-content-inner .notion-row .notion-column {
