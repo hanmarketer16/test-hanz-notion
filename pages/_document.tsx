@@ -44,8 +44,46 @@ export default class MyDocument extends Document {
                     </div>
                   </div>
                 </div>
-                <div className="mebot-card"></div>
-                <div className="mebot-card"></div>
+                <div className="mebot-card">
+                <div className="mev1">
+                    <div className="mev2">
+                      <div className="mev-container">
+                        <div className="text-center">
+                          <div className="navicon-bottom">
+                            <a className="navconbot" href="">
+                              <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                            </a>
+                          </div>
+                          <div className="navtext-bottom">
+                            <h3 className="navtitlebot">
+                                <a href="#">Back</a>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mebot-card">
+                <div className="mev1">
+                    <div className="mev2">
+                      <div className="mev-container">
+                        <div className="text-center">
+                          <div className="navicon-bottom">
+                            <a className="navconbot" href="">
+                              <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                            </a>
+                          </div>
+                          <div className="navtext-bottom">
+                            <h3 className="navtitlebot">
+                                <a href="#">Back</a>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 
