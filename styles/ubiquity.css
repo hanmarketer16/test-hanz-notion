@@ -596,8 +596,8 @@ path[d='M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V
 }
 
 .notion-page-link {
-  background-color: #fff;
-  color: #404040;
+  background-color: var(--warna_3);
+  color: #ffffff;
   height: auto;
   width: 192px;
   background-repeat: no-repeat;
@@ -617,10 +617,6 @@ path[d='M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V
   vertical-align: top;
   width: calc(50% - 8px);
   box-shadow: 0 0 48px #00000010;
-}
-
-.notion-page-link:hover {
-  opacity: 1;
 }
 div.notion-page-content a.notion-page-link::before {
   content: '';
@@ -653,9 +649,10 @@ div.notion-page-content a.notion-page-link::after {
 }
 
 .notion-page-link:hover {
-  background-color: #ffffff;
+  background-color: var(--warna_1);
   background-repeat: no-repeat;
   background-position: 12px;
+  opacity: 1;
 }
 
 .dark-mode .notion-page-link:hover {

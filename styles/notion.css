@@ -148,7 +148,7 @@
 .notion-h1,
 .notion-h2,
 .notion-h3 {
-  margin-bottom: 0.25em;
+  margin-bottom: 0;
 }
 
 .notion-callout {
@@ -156,7 +156,7 @@
 }
 
 .notion-hr {
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 @media only screen and (max-width: 920px) {
