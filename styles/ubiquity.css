@@ -227,7 +227,7 @@ body.light-mode img {
   margin: auto;
   /* filter: grayscale(1); */
   text-align: right;
-  max-width: 640px;
+  max-width: 1300px;
   padding: 78px;
   padding: 0;
   text-align: center;
@@ -238,7 +238,7 @@ body.light-mode img {
 }
 
 .notion-page-content {
-  max-width: 640px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
