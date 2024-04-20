@@ -486,6 +486,7 @@
   display: flex;
   min-height: 1px;
   text-align: center;
+  width: 100%;
 }
 .mev1 {
   background-color: var(--warna_1);
@@ -545,10 +546,6 @@
   text-align: center;
 }
 @media (max-width: 1024px) {
-  .menav-card-container {
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  }
   .mev-container {
     padding: 15px 15px 15px 15px;
   }
