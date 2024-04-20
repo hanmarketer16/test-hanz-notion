@@ -495,11 +495,12 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 100%;
+  width: auto;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-line-pack: start;
   align-content: flex-start;
+  padding: 15px 0px 0px 0px;
 }
 .mebot-card .mev1:hover {
   background-color: var(--warna_2);
@@ -529,11 +530,9 @@
   border-color: #FFFFFF;
 }
 .navconbot i {
-  width: 1em;
-  height: 1em;
   position: relative;
   display: block;
-  transform: rotate(0deg);
+  font-size: 20px;
 }
 .navtitlebot {
   font-weight: 700;
@@ -542,6 +541,9 @@
 .navtitlebot a {
   font-weight: 700;
   color: inherit;
+}
+.text-center {
+  text-align: center;
 }
 @media (max-width: 1024px) {
   .menav-card-container {
@@ -572,7 +574,6 @@
     margin: 0px 0px 0px 0px;
     --e-column-margin-right: 0px;
     --e-column-margin-left: 0px;
-    padding: 15px 0px 0px 0px;
     border-radius: 0px 0px 0px 0px;
   }
   .mev-container {
