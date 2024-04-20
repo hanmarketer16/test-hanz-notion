@@ -18,6 +18,9 @@ export default class MyDocument extends Document {
             />
 
             <link rel='manifest' href='/manifest.json' />
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+
           </Head>
 
           <body>
@@ -30,7 +33,7 @@ export default class MyDocument extends Document {
                       <div className="mev-container">
                         <div className="text-center">
                           <div className="navicon-bottom">
-                            <a className="navconbot" href="">
+                            <a className="navconbot" href="#">
                               <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
                             </a>
                           </div>
@@ -50,13 +53,13 @@ export default class MyDocument extends Document {
                       <div className="mev-container">
                         <div className="text-center">
                           <div className="navicon-bottom">
-                            <a className="navconbot" href="">
-                              <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                            <a className="navconbot" href="/">
+                              <i aria-hidden="true" className="fas fa-home"></i>
                             </a>
                           </div>
                           <div className="navtext-bottom">
                             <h3 className="navtitlebot">
-                                <a href="#">Back</a>
+                                <a href="/">Beranda</a>
                             </h3>
                           </div>
                         </div>
@@ -70,13 +73,13 @@ export default class MyDocument extends Document {
                       <div className="mev-container">
                         <div className="text-center">
                           <div className="navicon-bottom">
-                            <a className="navconbot" href="">
-                              <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                            <a className="navconbot" href="#">
+                              <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
                             </a>
                           </div>
                           <div className="navtext-bottom">
                             <h3 className="navtitlebot">
-                                <a href="#">Back</a>
+                                <a href="#">Forward</a>
                             </h3>
                           </div>
                         </div>

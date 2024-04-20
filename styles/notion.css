@@ -471,7 +471,7 @@
   display: block;
 }
 .menav-card-container {
-  max-width: 1140px;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,6 +485,8 @@
   display: -ms-flexbox;
   display: flex;
   min-height: 1px;
+  width: 100%;
+  text-align: center;
 }
 .mev1 {
   background-color: var(--warna_1);
@@ -533,16 +535,6 @@
   display: block;
   transform: rotate(0deg);
 }
-.navconbot i:before {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.fa-arrow-circle-left:before {
-  content: "\f0a8";
-}
 .navtitlebot {
   font-weight: 700;
   color: #FFFFFF;
@@ -555,7 +547,6 @@
   .menav-card-container {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      max-width: 1024px;
   }
   .mev-container {
     padding: 15px 15px 15px 15px;
@@ -573,9 +564,6 @@
       margin-top: 0px;
       margin-bottom: 0px;
       padding: 0px 0px 0px 0px;
-  }
-  .menav-card-container {
-    max-width: 767px;
   }
   .mebot-card {
     width: 33%;
