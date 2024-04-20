@@ -460,6 +460,9 @@
   height: 0;
   width: 0;
 }
+.notion-page.notion-page-has-cover.notion-page-has-icon.notion-page-has-text-icon.notion-full-page {
+  margin-top: 1.7rem;
+}
 @media (max-width: 640px) {
   .notion-page-content-inner .notion-row .notion-column {
     display: grid;

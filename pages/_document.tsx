@@ -21,6 +21,9 @@ export default class MyDocument extends Document {
           </Head>
 
           <body>
+
+            <section className="menu-bottom"></section>
+
             <script
               dangerouslySetInnerHTML={{
                 __html: `
