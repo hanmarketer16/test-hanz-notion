@@ -1051,7 +1051,7 @@ video.notion-page-cover {
 
 .notion-page,
 .notion-column {
-  justify-content: center;
+  justify-content: start;
 }
 .notion-hr,
 .notion-simple-table td,
