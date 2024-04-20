@@ -443,6 +443,9 @@
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
+  .notion-row {
+    gap: 1rem;
+  }
   .notion-row .notion-column {
     gap: 1rem;
     width: 100% !important;
