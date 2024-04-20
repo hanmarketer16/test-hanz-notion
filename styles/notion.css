@@ -447,7 +447,6 @@
     gap: 1rem;
   }
   .notion-row .notion-column {
-    gap: 1rem;
     width: 100% !important;
   }
   .notion-h1, .notion-h2, .notion-h3, .notion-hr {
@@ -456,12 +455,11 @@
   }
   .notion-column .notion-page-link {
     grid-column: span 1;
-    overflow: auto;
+    width: 100%;
   }
 }
 @media (max-width: 312px) {
     .notion-column .notion-page-link {
         grid-column: span 2;
-        overflow: auto;
     }
 }

@@ -600,9 +600,9 @@ path[d='M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V
   color: #ffffff;
   background-repeat: no-repeat;
   background-position: 12px;
-  display: inline-table;
+  display: flex;
   position: relative;
-  text-align: right;
+  text-align: start;
   padding: 16px 16px 16px 48px;
   line-height: 1;
   margin: 0;
