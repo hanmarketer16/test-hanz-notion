@@ -445,10 +445,12 @@
 .notion-list-body .notion-list-item.notion-page-link {
   width: 100%;
   padding: 5px 5px 5px 5px;
+  justify-content: flex-start;
 }
 .notion-list-body .notion-list-item.notion-page-link .notion-list-item-title .notion-property .notion-page-link {
   width: 100%;
   padding: 5px;
+  background: transparent;
 }
 .notion-list-body .notion-list-item.notion-page-link .notion-list-item-title .notion-property .notion-page-link .notion-page-title {
   gap: 5px;
