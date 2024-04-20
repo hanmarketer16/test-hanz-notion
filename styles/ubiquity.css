@@ -104,10 +104,6 @@
   width: 100%;
 }
 
-.notion-title {
-  display: none;
-}
-
 .notion {
   font-family: 'Ubiquity Nova', 'Proxima Nova', Avenir, sans-serif;
 }
@@ -864,7 +860,7 @@ video.notion-page-cover {
 
 .notion-page-icon-hero.notion-page-icon-image {
   position: relative !important;
-  margin-bottom: var(--header);
+  margin-bottom: 20px;
   top: 20px !important;
 }
 
