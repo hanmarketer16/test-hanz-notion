@@ -397,7 +397,7 @@ svg.notion-page-icon {
   > div.breadcrumbs
   > :first-child
   > span {
-  padding-left: 29px !important;
+  padding-left: 5px !important;
 }
 
 .dark-mode .notion-header .breadcrumb {
@@ -423,7 +423,7 @@ svg.notion-page-icon {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding-left: 26px;
+  padding-left: 5px;
   text-rendering: optimizeLegibility;
 }
 
