@@ -447,7 +447,7 @@
     gap: 1rem;
     width: 100% !important;
   }
-  .notion-h1, .notion-h2, .notion-h3 {
+  .notion-h1, .notion-h2, .notion-h3, .notion-hr {
     margin-bottom: 0;
     grid-column: span 2;
   }
