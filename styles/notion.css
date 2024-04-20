@@ -7,6 +7,24 @@
  * places to add some flare.
  */
 
+:root {
+  --warna_1: #0170dc;
+  --warna_2: #00509e;
+  --warna_3: #33A8F4;
+  --warna_4: #C80101;
+  --warna_5: #FF0000;
+  --warna_6: #E3BC00;
+  --warna_7: #F8D116;
+  --warna_8: #009D10;
+  --warna_9: #21CE33;
+  --warna_10: #BC25B6;
+  --warna_11: #EA21E2;
+  --warna_12: ;
+  --warna_13: ;
+  --warna_14: ;
+  --warna_15: ;
+}
+
 .notion {
   --notion-max-width: 720px;
   --notion-header-height: 54px;
