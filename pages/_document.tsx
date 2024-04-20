@@ -31,7 +31,7 @@ export default class MyDocument extends Document {
                         <div className="text-center">
                           <div className="navicon-bottom">
                             <a className="navconbot" href="">
-                              <i aria-hidden="true" class="fas fa-arrow-circle-left"></i>
+                              <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
                             </a>
                           </div>
                           <div className="navtext-bottom">
