@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
             <script
               dangerouslySetInnerHTML={{
                 __html: `
-                  function goBack(event) {
+                  function gobBack(event) {
                     event.preventDefault();
                     window.history.back();
                   }
@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a style={{ cursor: 'pointer' }} onClick={goBack}>
+                        <a style={{ cursor: 'pointer' }} onClick={gobBack}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <a className="navconbot">
