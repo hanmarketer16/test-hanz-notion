@@ -5,6 +5,12 @@ import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
 
+  componentDidMount() {
+    // Simpan referensi ke fungsi untuk menggerakkan sejarah window
+    this.forwardHistory = () => window.history.forward();
+    this.backHistory = () => window.history.back();
+  }
+
   render() {
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
@@ -26,13 +32,14 @@ export default class MyDocument extends Document {
 
           <body>
 
-            <section className="menu-bottom">
+          <section className="menu-bottom">
               <div className="menav-card-container">
                 <div className="mebot-card">
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a href="#" onClick={(e) => { e.preventDefault(); window.history.back(); }}>
+                        {/* Tombol Back */}
+                        <a href="#" onClick={this.backHistory}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -41,7 +48,7 @@ export default class MyDocument extends Document {
                             </div>
                             <div className="navtext-bottom">
                               <h3 className="navtitlebot">
-                                  <span>Back</span>
+                                <span>Back</span>
                               </h3>
                             </div>
                           </div>
@@ -51,32 +58,11 @@ export default class MyDocument extends Document {
                   </div>
                 </div>
                 <div className="mebot-card">
-                <div className="mev1">
+                  <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a href="/" style={{ cursor: 'pointer' }}>
-                          <div className="text-center">
-                            <div className="navicon-bottom">
-                              <span className="navconbot">
-                                <i aria-hidden="true" className="fas fa-home"></i>
-                              </span>
-                            </div>
-                            <div className="navtext-bottom">
-                              <h3 className="navtitlebot">
-                                  <span>Beranda</span>
-                              </h3>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mebot-card">
-                <div className="mev1">
-                    <div className="mev2">
-                      <div className="mev-container">
-                        <a href="#" onClick={(e) => { e.preventDefault(); window.history.forward(); }}>
+                        {/* Tombol Forward */}
+                        <a href="#" onClick={this.forwardHistory}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -85,7 +71,7 @@ export default class MyDocument extends Document {
                             </div>
                             <div className="navtext-bottom">
                               <h3 className="navtitlebot">
-                                  <span>Forward</span>
+                                <span>Forward</span>
                               </h3>
                             </div>
                           </div>
