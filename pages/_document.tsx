@@ -31,18 +31,20 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <div className="text-center">
-                          <div className="navicon-bottom">
-                            <a className="navconbot" href="#">
-                              <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
-                            </a>
+                        <button onClick={() => window.history.back()}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <a className="navconbot">
+                                <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                              </a>
+                            </div>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                  <a>Back</a>
+                              </h3>
+                            </div>
                           </div>
-                          <div className="navtext-bottom">
-                            <h3 className="navtitlebot">
-                                <a href="#">Back</a>
-                            </h3>
-                          </div>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -71,25 +73,27 @@ export default class MyDocument extends Document {
                 <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <div className="text-center">
-                          <div className="navicon-bottom">
-                            <a className="navconbot" href="#">
-                              <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
-                            </a>
+                        <button onClick={() => window.history.forward()}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <a className="navconbot">
+                                <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
+                              </a>
+                            </div>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                  <a>Forward</a>
+                              </h3>
+                            </div>
                           </div>
-                          <div className="navtext-bottom">
-                            <h3 className="navtitlebot">
-                                <a href="#">Forward</a>
-                            </h3>
-                          </div>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-
+            
             <script
               dangerouslySetInnerHTML={{
                 __html: `
