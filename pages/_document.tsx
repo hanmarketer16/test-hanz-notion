@@ -52,7 +52,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a id="goBackLink" href="#" style={{ cursor: 'pointer' }}>
+                        <a id="goBackLink" style={{ cursor: 'pointer' }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -96,7 +96,7 @@ export default class MyDocument extends Document {
                 <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a id="goForwardLink" href="#" style={{ cursor: 'pointer' }}>
+                        <a id="goForwardLink" style={{ cursor: 'pointer' }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
