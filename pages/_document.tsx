@@ -4,17 +4,6 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
-
-  const goBack = (event) => {
-    event.preventDefault();
-    router.back();
-  };
-
-  const goForward = (event) => {
-    event.preventDefault();
-    router.push('/'); // Navigasi ke halaman berikutnya dalam histori peramban
-  };
-
   render() {
 
     return (
@@ -32,6 +21,22 @@ export default class MyDocument extends Document {
             <link rel='manifest' href='/manifest.json' />
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  function goBack(event) {
+                    event.preventDefault();
+                    window.history.back();
+                  }
+
+                  function goForward(event) {
+                    event.preventDefault();
+                    window.history.forward();
+                  }
+                `
+              }}
+            />
 
           </Head>
           <body>
