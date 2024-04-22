@@ -4,39 +4,6 @@ import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
 
-  state = {
-    canGoBack: false,
-    canGoForward: false,
-  };
-
-  componentDidMount() {
-    this.updateNavigationStatus();
-    window.addEventListener('popstate', this.updateNavigationStatus);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('popstate', this.updateNavigationStatus);
-  }
-
-  updateNavigationStatus = () => {
-    this.setState({
-      canGoBack: window.history.length > 1,
-      canGoForward: window.history.length !== window.history.state.index + 1,
-    });
-  };
-
-  goBack = () => {
-    if (this.state.canGoBack) {
-      window.history.back();
-    }
-  };
-
-  goForward = () => {
-    if (this.state.canGoForward) {
-      window.history.forward();
-    }
-  };
-
   render() {
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
@@ -63,7 +30,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a style={{ cursor: 'pointer' }} onClick={this.goBack}>
+                        <a style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.back(); }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -107,7 +74,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a style={{ cursor: 'pointer' }} onClick={this.goForward}>
+                        <a style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.forward(); }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
