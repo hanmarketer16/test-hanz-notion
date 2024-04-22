@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
           </Head>
           <body>
 
-            <section className="menu-bottom">
+          <section className="menu-bottom">
               <div className="menav-card-container">
                 <div className="mebot-card">
                   <div className="mev1">
