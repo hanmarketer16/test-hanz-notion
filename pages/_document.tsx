@@ -4,17 +4,18 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
+
+  const goBack = (event) => {
+    event.preventDefault();
+    router.back();
+  };
+
+  const goForward = (event) => {
+    event.preventDefault();
+    router.push('/'); // Navigasi ke halaman berikutnya dalam histori peramban
+  };
+
   render() {
-
-    const goBack = (event) => {
-      event.preventDefault();
-      router.back();
-    };
-
-    const goForward = (event) => {
-      event.preventDefault();
-      router.push('/'); // Navigasi ke halaman berikutnya dalam histori peramban
-    };
 
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
