@@ -5,7 +5,6 @@ import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
   render() {
-
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
@@ -25,7 +24,7 @@ export default class MyDocument extends Document {
             <script
               dangerouslySetInnerHTML={{
                 __html: `
-                  function gobBack(event) {
+                  function goBack(event) {
                     event.preventDefault();
                     window.history.back();
                   }
@@ -37,30 +36,29 @@ export default class MyDocument extends Document {
                 `
               }}
             />
-
+            
           </Head>
+
           <body>
 
-          <section className="menu-bottom">
+            <section className="menu-bottom">
               <div className="menav-card-container">
                 <div className="mebot-card">
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a style={{ cursor: 'pointer' }} onClick={gobBack}>
-                          <div className="text-center">
-                            <div className="navicon-bottom">
-                              <a className="navconbot">
-                                <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
-                              </a>
-                            </div>
-                            <div className="navtext-bottom">
-                              <h3 className="navtitlebot">
-                                  <a>Back</a>
-                              </h3>
-                            </div>
+                        <div className="text-center">
+                          <div className="navicon-bottom">
+                            <a className="navconbot" href="#" style={{ cursor: 'pointer' }} onClick={goBack}>
+                              <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                            </a>
                           </div>
-                        </a>
+                          <div className="navtext-bottom">
+                            <h3 className="navtitlebot">
+                                <a href="#" style={{ cursor: 'pointer' }} onClick={goBack}>Back</a>
+                            </h3>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -69,20 +67,18 @@ export default class MyDocument extends Document {
                 <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a href="/" style={{ cursor: 'pointer' }}>
-                          <div className="text-center">
-                            <div className="navicon-bottom">
-                              <a className="navconbot">
-                                <i aria-hidden="true" className="fas fa-home"></i>
-                              </a>
-                            </div>
-                            <div className="navtext-bottom">
-                              <h3 className="navtitlebot">
-                                  <a>Beranda</a>
-                              </h3>
-                            </div>
+                        <div className="text-center">
+                          <div className="navicon-bottom">
+                            <a className="navconbot" href="/">
+                              <i aria-hidden="true" className="fas fa-home"></i>
+                            </a>
                           </div>
-                        </a>
+                          <div className="navtext-bottom">
+                            <h3 className="navtitlebot">
+                                <a href="/">Beranda</a>
+                            </h3>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -91,27 +87,25 @@ export default class MyDocument extends Document {
                 <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a style={{ cursor: 'pointer' }} onClick={goForward}>
-                          <div className="text-center">
-                            <div className="navicon-bottom">
-                              <a className="navconbot">
-                                <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
-                              </a>
-                            </div>
-                            <div className="navtext-bottom">
-                              <h3 className="navtitlebot">
-                                  <a>Forward</a>
-                              </h3>
-                            </div>
+                        <div className="text-center">
+                          <div className="navicon-bottom">
+                            <a className="navconbot" href="#" style={{ cursor: 'pointer' }} onClick={goForward}>
+                              <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
+                            </a>
                           </div>
-                        </a>
+                          <div className="navtext-bottom">
+                            <h3 className="navtitlebot">
+                                <a href="#" style={{ cursor: 'pointer' }} onClick={goForward}>Forward</a>
+                            </h3>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-            
+
             <script
               dangerouslySetInnerHTML={{
                 __html: `
