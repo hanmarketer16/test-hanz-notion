@@ -1,18 +1,18 @@
-import * as React from 'react'
-import Document, { Head, Html, Main, NextScript } from 'next/document'
-
-import { IconContext } from '@react-icons/all-files'
+import * as React from 'react';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { IconContext } from '@react-icons/all-files';
 
 export default class MyDocument extends Document {
-
   componentDidMount() {
     document.getElementById('goBackLink').addEventListener('click', this.goBack);
     document.getElementById('goForwardLink').addEventListener('click', this.goForward);
+    document.getElementById('goHomeLink').addEventListener('click', this.goHome); // Tambahkan ini
   }
 
   componentWillUnmount() {
     document.getElementById('goBackLink').removeEventListener('click', this.goBack);
     document.getElementById('goForwardLink').removeEventListener('click', this.goForward);
+    document.getElementById('goHomeLink').removeEventListener('click', this.goHome); // Tambahkan ini
   }
 
   goBack = (event) => {
@@ -23,6 +23,11 @@ export default class MyDocument extends Document {
   goForward = (event) => {
     event.preventDefault();
     window.history.forward();
+  };
+
+  goHome = (event) => { // Tambahkan ini
+    event.preventDefault();
+    window.location.href = '/'; // Ganti dengan URL beranda Anda jika perlu
   };
 
   render() {
@@ -71,10 +76,10 @@ export default class MyDocument extends Document {
                   </div>
                 </div>
                 <div className="mebot-card">
-                <div className="mev1">
+                  <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a href="/" style={{ cursor: 'pointer' }}>
+                        <a id="goHomeLink" style={{ cursor: 'pointer' }}> {/* Tambahkan ini */}
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -93,7 +98,7 @@ export default class MyDocument extends Document {
                   </div>
                 </div>
                 <div className="mebot-card">
-                <div className="mev1">
+                  <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
                         <a id="goForwardLink" style={{ cursor: 'pointer' }}>
