@@ -446,6 +446,7 @@
   width: 100%;
   padding: 5px 5px 5px 5px;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .notion-list-body .notion-list-item.notion-page-link .notion-list-item-title .notion-property .notion-page-link {
   width: 100%;
