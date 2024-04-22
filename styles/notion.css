@@ -561,9 +561,8 @@
   font-size: 24px;
 }
 .navtitlebot,
-.navtitlebot a {
+.navtitlebot span {
   font-size: 10px;
-  pointer-events: none;
 }
 .notion-page.notion-page-has-cover.notion-page-has-icon.notion-page-has-text-icon.notion-full-page .notion-title {
   padding-top: 4.5rem;

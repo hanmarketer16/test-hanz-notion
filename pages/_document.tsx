@@ -55,13 +55,13 @@ export default class MyDocument extends Document {
                         <a id="goBackLink" href="#" style={{ cursor: 'pointer' }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
-                              <a className="navconbot">
+                              <span className="navconbot">
                                 <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
-                              </a>
+                              </span>
                             </div>
                             <div className="navtext-bottom">
                               <h3 className="navtitlebot">
-                                  <a>Back</a>
+                                  <span>Back</span>
                               </h3>
                             </div>
                           </div>
@@ -74,16 +74,16 @@ export default class MyDocument extends Document {
                 <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a href="#" style={{ cursor: 'pointer' }}>
+                        <a href="/" style={{ cursor: 'pointer' }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
-                              <a className="navconbot">
+                              <span className="navconbot">
                                 <i aria-hidden="true" className="fas fa-home"></i>
-                              </a>
+                              </span>
                             </div>
                             <div className="navtext-bottom">
                               <h3 className="navtitlebot">
-                                  <a>Beranda</a>
+                                  <span>Beranda</span>
                               </h3>
                             </div>
                           </div>
@@ -99,13 +99,13 @@ export default class MyDocument extends Document {
                         <a id="goForwardLink" href="#" style={{ cursor: 'pointer' }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
-                              <a className="navconbot">
+                              <span className="navconbot">
                                 <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
-                              </a>
+                              </span>
                             </div>
                             <div className="navtext-bottom">
                               <h3 className="navtitlebot">
-                                  <a>Forward</a>
+                                  <span>Forward</span>
                               </h3>
                             </div>
                           </div>
