@@ -5,6 +5,17 @@ import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
   render() {
+
+    const goBack = (event) => {
+      event.preventDefault();
+      router.back();
+    };
+
+    const goForward = (event) => {
+      event.preventDefault();
+      router.push('/'); // Navigasi ke halaman berikutnya dalam histori peramban
+    };
+
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
@@ -22,7 +33,6 @@ export default class MyDocument extends Document {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
 
           </Head>
-
           <body>
 
             <section className="menu-bottom">
@@ -31,7 +41,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <button onClick={() => window.history.back()}>
+                        <a style={{ cursor: 'pointer' }} onClick={goBack}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <a className="navconbot">
@@ -44,7 +54,7 @@ export default class MyDocument extends Document {
                               </h3>
                             </div>
                           </div>
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -53,18 +63,20 @@ export default class MyDocument extends Document {
                 <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <div className="text-center">
-                          <div className="navicon-bottom">
-                            <a className="navconbot" href="/">
-                              <i aria-hidden="true" className="fas fa-home"></i>
-                            </a>
+                        <a href="/" style={{ cursor: 'pointer' }}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <a className="navconbot">
+                                <i aria-hidden="true" className="fas fa-home"></i>
+                              </a>
+                            </div>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                  <a>Beranda</a>
+                              </h3>
+                            </div>
                           </div>
-                          <div className="navtext-bottom">
-                            <h3 className="navtitlebot">
-                                <a href="/">Beranda</a>
-                            </h3>
-                          </div>
-                        </div>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -73,7 +85,7 @@ export default class MyDocument extends Document {
                 <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <button onClick={() => window.history.forward()}>
+                        <a style={{ cursor: 'pointer' }} onClick={goForward}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <a className="navconbot">
@@ -86,7 +98,7 @@ export default class MyDocument extends Document {
                               </h3>
                             </div>
                           </div>
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
