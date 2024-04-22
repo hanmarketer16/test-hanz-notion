@@ -1,9 +1,52 @@
 import * as React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-
 import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      canGoBack: false, // Menyimpan status apakah ada halaman sebelumnya
+      canGoForward: false, // Menyimpan status apakah ada halaman selanjutnya
+    };
+  }
+
+  componentDidMount() {
+    // Mengecek apakah ada halaman sebelumnya yang dapat diakses
+    this.setState({ canGoBack: window.history.length > 1 });
+
+    // Event listener untuk menangani perubahan riwayat
+    window.addEventListener('popstate', this.handleHistoryChange);
+  }
+
+  componentWillUnmount() {
+    // Membersihkan event listener saat komponen di-unmount
+    window.removeEventListener('popstate', this.handleHistoryChange);
+  }
+
+  // Method untuk menangani perubahan riwayat
+  handleHistoryChange = () => {
+    // Update status ketersediaan navigasi ke halaman sebelumnya dan halaman selanjutnya
+    this.setState({
+      canGoBack: window.history.length > 1,
+      canGoForward: window.history.length !== window.history.state.index + 1,
+    });
+  };
+
+  // Method untuk kembali ke halaman sebelumnya
+  goBack = () => {
+    if (this.state.canGoBack) {
+      window.history.back();
+    }
+  };
+
+  // Method untuk menuju halaman selanjutnya
+  goForward = () => {
+    if (this.state.canGoForward) {
+      window.history.forward();
+    }
+  };
 
   render() {
     return (
@@ -23,7 +66,6 @@ export default class MyDocument extends Document {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
 
           </Head>
-
           <body>
 
             <section className="menu-bottom">
@@ -32,7 +74,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.back(); }}>
+                        <a style={{ cursor: 'pointer' }} onClick={this.goBack}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -76,7 +118,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.forward(); }}>
+                        <a style={{ cursor: 'pointer' }} onClick={this.goForward}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
