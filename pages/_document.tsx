@@ -10,12 +10,20 @@ export default class MyDocument extends Document {
   };
 
   componentDidMount() {
-    // Add your existing code for handling history change and setting state
+    this.updateNavigationStatus();
+    window.addEventListener('popstate', this.updateNavigationStatus);
   }
 
   componentWillUnmount() {
-    // Add your existing cleanup code for removing event listener
+    window.removeEventListener('popstate', this.updateNavigationStatus);
   }
+
+  updateNavigationStatus = () => {
+    this.setState({
+      canGoBack: window.history.length > 1,
+      canGoForward: window.history.length !== window.history.state.index + 1,
+    });
+  };
 
   goBack = () => {
     if (this.state.canGoBack) {
