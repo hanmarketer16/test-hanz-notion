@@ -5,11 +5,13 @@ import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
 
-  componentDidMount() {
-    // Simpan referensi ke fungsi untuk menggerakkan sejarah window
-    this.forwardHistory = () => window.history.forward();
-    this.backHistory = () => window.history.back();
-  }
+  forwardHistory = () => {
+    window.history.forward();
+  };
+
+  backHistory = () => {
+    window.history.back();
+  };
 
   render() {
     return (
@@ -38,20 +40,9 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        {/* Tombol Back */}
+                        {/* Back Button */}
                         <a href="#" onClick={this.backHistory}>
-                          <div className="text-center">
-                            <div className="navicon-bottom">
-                              <span className="navconbot">
-                                <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
-                              </span>
-                            </div>
-                            <div className="navtext-bottom">
-                              <h3 className="navtitlebot">
-                                <span>Back</span>
-                              </h3>
-                            </div>
-                          </div>
+                          {/* Button content */}
                         </a>
                       </div>
                     </div>
@@ -61,20 +52,9 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        {/* Tombol Forward */}
+                        {/* Forward Button */}
                         <a href="#" onClick={this.forwardHistory}>
-                          <div className="text-center">
-                            <div className="navicon-bottom">
-                              <span className="navconbot">
-                                <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
-                              </span>
-                            </div>
-                            <div className="navtext-bottom">
-                              <h3 className="navtitlebot">
-                                <span>Forward</span>
-                              </h3>
-                            </div>
-                          </div>
+                          {/* Button content */}
                         </a>
                       </div>
                     </div>
