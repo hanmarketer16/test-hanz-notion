@@ -464,6 +464,9 @@
 .notion-page.notion-page-has-cover.notion-page-has-icon.notion-page-has-text-icon.notion-full-page {
   margin-top: 1.7rem;
 }
+.notion-page-link>.notion-page-title {
+  width: 100%;
+}
 .menu-bottom {
   z-index: 9999;
   position: fixed;
