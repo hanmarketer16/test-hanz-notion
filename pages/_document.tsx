@@ -1,11 +1,19 @@
 import * as React from 'react'
+import Link from 'next/link';
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-
 import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
 
   render() {
+
+    const [currentPage, setCurrentPage] = useState(1);
+
+    useEffect(() => {
+      // Lakukan sesuatu setiap kali komponen di-mount ulang (misalnya, ketika navigasi halaman terjadi)
+      setCurrentPage(parseInt(window.location.pathname.split('/')[1] || '1'));
+    }, []);
+
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
@@ -32,20 +40,22 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a href="#" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.back(); }}>
-                          <div className="text-center">
-                            <div className="navicon-bottom">
-                              <span className="navconbot">
-                                <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
-                              </span>
+                        <Link href={`/${currentPage - 1}`}>
+                          <a>
+                            <div className="text-center">
+                              <div className="navicon-bottom">
+                                <span className="navconbot">
+                                  <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                                </span>
+                              </div>
+                              <div className="navtext-bottom">
+                                <h3 className="navtitlebot">
+                                  <span>Back</span>
+                                </h3>
+                              </div>
                             </div>
-                            <div className="navtext-bottom">
-                              <h3 className="navtitlebot">
-                                <span>Back</span>
-                              </h3>
-                            </div>
-                          </div>
-                        </a>
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -76,20 +86,22 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a href="#" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.forward(); }}>
-                          <div className="text-center">
-                            <div className="navicon-bottom">
-                              <span className="navconbot">
-                                <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
-                              </span>
+                        <Link href={`/${currentPage + 1}`}>
+                          <a>
+                            <div className="text-center">
+                              <div className="navicon-bottom">
+                                <span className="navconbot">
+                                  <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
+                                </span>
+                              </div>
+                              <div className="navtext-bottom">
+                                <h3 className="navtitlebot">
+                                  <span>Forward</span>
+                                </h3>
+                              </div>
                             </div>
-                            <div className="navtext-bottom">
-                              <h3 className="navtitlebot">
-                                <span>Forward</span>
-                              </h3>
-                            </div>
-                          </div>
-                        </a>
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
