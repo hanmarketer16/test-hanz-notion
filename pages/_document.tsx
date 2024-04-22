@@ -4,6 +4,27 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
+
+  componentDidMount() {
+    document.getElementById('goBackLink').addEventListener('click', this.goBack);
+    document.getElementById('goForwardLink').addEventListener('click', this.goForward);
+  }
+
+  componentWillUnmount() {
+    document.getElementById('goBackLink').removeEventListener('click', this.goBack);
+    document.getElementById('goForwardLink').removeEventListener('click', this.goForward);
+  }
+
+  goBack = (event) => {
+    event.preventDefault();
+    window.history.back();
+  };
+
+  goForward = (event) => {
+    event.preventDefault();
+    window.history.forward();
+  };
+
   render() {
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
@@ -21,22 +42,6 @@ export default class MyDocument extends Document {
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
 
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  function goBack(event) {
-                    event.preventDefault();
-                    window.history.back();
-                  }
-
-                  function goForward(event) {
-                    event.preventDefault();
-                    window.history.forward();
-                  }
-                `
-              }}
-            />
-            
           </Head>
 
           <body>
@@ -47,18 +52,20 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <div className="text-center">
-                          <div className="navicon-bottom">
-                            <a className="navconbot" href="#" style={{ cursor: 'pointer' }} onClick={goBack}>
-                              <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
-                            </a>
+                        <a id="goBackLink" href="#" style={{ cursor: 'pointer' }}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <a className="navconbot">
+                                <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                              </a>
+                            </div>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                  <a>Back</a>
+                              </h3>
+                            </div>
                           </div>
-                          <div className="navtext-bottom">
-                            <h3 className="navtitlebot">
-                                <a href="#" style={{ cursor: 'pointer' }} onClick={goBack}>Back</a>
-                            </h3>
-                          </div>
-                        </div>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -67,18 +74,20 @@ export default class MyDocument extends Document {
                 <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <div className="text-center">
-                          <div className="navicon-bottom">
-                            <a className="navconbot" href="/">
-                              <i aria-hidden="true" className="fas fa-home"></i>
-                            </a>
+                        <a href="#" style={{ cursor: 'pointer' }}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <a className="navconbot">
+                                <i aria-hidden="true" className="fas fa-home"></i>
+                              </a>
+                            </div>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                  <a>Beranda</a>
+                              </h3>
+                            </div>
                           </div>
-                          <div className="navtext-bottom">
-                            <h3 className="navtitlebot">
-                                <a href="/">Beranda</a>
-                            </h3>
-                          </div>
-                        </div>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -87,18 +96,20 @@ export default class MyDocument extends Document {
                 <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <div className="text-center">
-                          <div className="navicon-bottom">
-                            <a className="navconbot" href="#" style={{ cursor: 'pointer' }} onClick={goForward}>
-                              <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
-                            </a>
+                        <a id="goForwardLink" href="#" style={{ cursor: 'pointer' }}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <a className="navconbot">
+                                <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
+                              </a>
+                            </div>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                  <a>Forward</a>
+                              </h3>
+                            </div>
                           </div>
-                          <div className="navtext-bottom">
-                            <h3 className="navtitlebot">
-                                <a href="#" style={{ cursor: 'pointer' }} onClick={goForward}>Forward</a>
-                            </h3>
-                          </div>
-                        </div>
+                        </a>
                       </div>
                     </div>
                   </div>
