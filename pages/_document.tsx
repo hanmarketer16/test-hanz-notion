@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a href="#" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.back(); }}>
+                        <a style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.back(); }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -76,7 +76,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a href="#" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.forward(); }}>
+                        <a style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.forward(); }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
