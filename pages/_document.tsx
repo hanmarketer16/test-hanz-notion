@@ -5,12 +5,24 @@ import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
 
-  forwardHistory = () => {
-    window.history.forward();
+  componentDidMount() {
+    document.getElementById('goBackLink').addEventListener('click', this.goBack);
+    document.getElementById('goForwardLink').addEventListener('click', this.goForward);
+  }
+
+  componentWillUnmount() {
+    document.getElementById('goBackLink').removeEventListener('click', this.goBack);
+    document.getElementById('goForwardLink').removeEventListener('click', this.goForward);
+  }
+
+  goBack = (event) => {
+    event.preventDefault();
+    window.history.back();
   };
 
-  backHistory = () => {
-    window.history.back();
+  goForward = (event) => {
+    event.preventDefault();
+    window.history.forward();
   };
 
   render() {
@@ -34,27 +46,69 @@ export default class MyDocument extends Document {
 
           <body>
 
-          <section className="menu-bottom">
+            <section className="menu-bottom">
               <div className="menav-card-container">
                 <div className="mebot-card">
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        {/* Back Button */}
-                        <a href="#" onClick={this.backHistory}>
-                          {/* Button content */}
+                        <a id="goBackLink" style={{ cursor: 'pointer' }}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <span className="navconbot">
+                                <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                              </span>
+                            </div>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                  <span>Back</span>
+                              </h3>
+                            </div>
+                          </div>
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="mebot-card">
-                  <div className="mev1">
+                <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        {/* Forward Button */}
-                        <a href="#" onClick={this.forwardHistory}>
-                          {/* Button content */}
+                        <a href="/" style={{ cursor: 'pointer' }}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <span className="navconbot">
+                                <i aria-hidden="true" className="fas fa-home"></i>
+                              </span>
+                            </div>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                  <span>Beranda</span>
+                              </h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mebot-card">
+                <div className="mev1">
+                    <div className="mev2">
+                      <div className="mev-container">
+                        <a id="goForwardLink" style={{ cursor: 'pointer' }}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <span className="navconbot">
+                                <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
+                              </span>
+                            </div>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                  <span>Forward</span>
+                              </h3>
+                            </div>
+                          </div>
                         </a>
                       </div>
                     </div>
