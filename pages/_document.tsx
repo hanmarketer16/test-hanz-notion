@@ -4,44 +4,25 @@ import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      canGoBack: false, // Menyimpan status apakah ada halaman sebelumnya
-      canGoForward: false, // Menyimpan status apakah ada halaman selanjutnya
-    };
-  }
+  state = {
+    canGoBack: false,
+    canGoForward: false,
+  };
 
   componentDidMount() {
-    // Mengecek apakah ada halaman sebelumnya yang dapat diakses
-    this.setState({ canGoBack: window.history.length > 1 });
-
-    // Event listener untuk menangani perubahan riwayat
-    window.addEventListener('popstate', this.handleHistoryChange);
+    // Add your existing code for handling history change and setting state
   }
 
   componentWillUnmount() {
-    // Membersihkan event listener saat komponen di-unmount
-    window.removeEventListener('popstate', this.handleHistoryChange);
+    // Add your existing cleanup code for removing event listener
   }
 
-  // Method untuk menangani perubahan riwayat
-  handleHistoryChange = () => {
-    // Update status ketersediaan navigasi ke halaman sebelumnya dan halaman selanjutnya
-    this.setState({
-      canGoBack: window.history.length > 1,
-      canGoForward: window.history.length !== window.history.state.index + 1,
-    });
-  };
-
-  // Method untuk kembali ke halaman sebelumnya
   goBack = () => {
     if (this.state.canGoBack) {
       window.history.back();
     }
   };
 
-  // Method untuk menuju halaman selanjutnya
   goForward = () => {
     if (this.state.canGoForward) {
       window.history.forward();
