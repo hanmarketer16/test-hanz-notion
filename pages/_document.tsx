@@ -1,13 +1,11 @@
 import * as React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-import { useRouter } from "next/router"
 
 import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
 
   render() {
-    const router = useRouter()
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
@@ -34,7 +32,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <button onClick={() => router.back()}>
+                        <a href="#" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.back(); }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -47,7 +45,7 @@ export default class MyDocument extends Document {
                               </h3>
                             </div>
                           </div>
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
