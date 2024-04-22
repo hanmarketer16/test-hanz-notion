@@ -3,6 +3,10 @@ import Link from 'next/link';
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { IconContext } from '@react-icons/all-files'
 
+interface MyDocumentState {
+  currentPage: number;
+}
+
 export default class MyDocument extends Document {
 
   constructor(props) {
