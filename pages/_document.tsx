@@ -1,31 +1,11 @@
 import * as React from 'react'
-import Link from 'next/link';
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-import { IconContext } from '@react-icons/all-files'
 
-interface MyDocumentState {
-  currentPage: number;
-}
+import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentPage: 1,
-    };
-  }
-
-  componentDidMount() {
-    this.setState({
-      currentPage: parseInt(window.location.pathname.split('/')[1] || '1'),
-    });
-  }
-
   render() {
-
-    const { currentPage } = this.state;
-
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
@@ -39,6 +19,7 @@ export default class MyDocument extends Document {
             />
 
             <link rel='manifest' href='/manifest.json' />
+
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
 
           </Head>
@@ -51,22 +32,20 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <Link href={`/${currentPage - 1}`}>
-                          <a>
-                            <div className="text-center">
-                              <div className="navicon-bottom">
-                                <span className="navconbot">
-                                  <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
-                                </span>
-                              </div>
-                              <div className="navtext-bottom">
-                                <h3 className="navtitlebot">
-                                  <span>Back</span>
-                                </h3>
-                              </div>
+                        <a href="#" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.back(); }}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <span className="navconbot">
+                                <i aria-hidden="true" className="fas fa-arrow-circle-left"></i>
+                              </span>
                             </div>
-                          </a>
-                        </Link>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                <span>Back</span>
+                              </h3>
+                            </div>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -97,22 +76,20 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <Link href={`/${currentPage + 1}`}>
-                          <a>
-                            <div className="text-center">
-                              <div className="navicon-bottom">
-                                <span className="navconbot">
-                                  <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
-                                </span>
-                              </div>
-                              <div className="navtext-bottom">
-                                <h3 className="navtitlebot">
-                                  <span>Forward</span>
-                                </h3>
-                              </div>
+                        <a href="#" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.forward(); }}>
+                          <div className="text-center">
+                            <div className="navicon-bottom">
+                              <span className="navconbot">
+                                <i aria-hidden="true" className="fas fa-arrow-circle-right"></i>
+                              </span>
                             </div>
-                          </a>
-                        </Link>
+                            <div className="navtext-bottom">
+                              <h3 className="navtitlebot">
+                                <span>Forward</span>
+                              </h3>
+                            </div>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>
