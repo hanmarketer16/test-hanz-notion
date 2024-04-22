@@ -467,6 +467,9 @@
 .notion-page-link>.notion-page-title {
   width: 100%;
 }
+.notion-list-item-title {
+  width: 100%;
+}
 .menu-bottom {
   z-index: 9999;
   position: fixed;
