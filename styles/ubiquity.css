@@ -517,7 +517,7 @@ body.dark-mode
   display: inline-block;
   max-height: 36px;
   text-overflow: ellipsis;
-  /* overflow: hidden; */
+  overflow: visible;
   white-space: nowrap;
   width: 100%;
 }
