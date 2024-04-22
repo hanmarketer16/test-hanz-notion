@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { IconContext } from '@react-icons/all-files'
@@ -27,8 +27,8 @@ export default class MyDocument extends Document {
             />
 
             <link rel='manifest' href='/manifest.json' />
-
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+            
 
           </Head>
 
