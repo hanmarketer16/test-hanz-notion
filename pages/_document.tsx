@@ -1,18 +1,26 @@
-import { useEffect, useState } from 'react';
+import * as React from 'react'
 import Link from 'next/link';
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentPage: 1,
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      currentPage: parseInt(window.location.pathname.split('/')[1] || '1'),
+    });
+  }
+
   render() {
 
-    const [currentPage, setCurrentPage] = useState(1);
-
-    useEffect(() => {
-      // Lakukan sesuatu setiap kali komponen di-mount ulang (misalnya, ketika navigasi halaman terjadi)
-      setCurrentPage(parseInt(window.location.pathname.split('/')[1] || '1'));
-    }, []);
+    const { currentPage } = this.state;
 
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
@@ -28,7 +36,6 @@ export default class MyDocument extends Document {
 
             <link rel='manifest' href='/manifest.json' />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
-            
 
           </Head>
 
