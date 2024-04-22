@@ -1,34 +1,9 @@
-import * as React from 'react';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
-import { IconContext } from '@react-icons/all-files';
+import * as React from 'react'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
+
+import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
-  componentDidMount() {
-    document.getElementById('goBackLink').addEventListener('click', this.goBack);
-    document.getElementById('goForwardLink').addEventListener('click', this.goForward);
-    document.getElementById('goHomeLink').addEventListener('click', this.goHome); // Tambahkan ini
-  }
-
-  componentWillUnmount() {
-    document.getElementById('goBackLink').removeEventListener('click', this.goBack);
-    document.getElementById('goForwardLink').removeEventListener('click', this.goForward);
-    document.getElementById('goHomeLink').removeEventListener('click', this.goHome); // Tambahkan ini
-  }
-
-  goBack = (event) => {
-    event.preventDefault();
-    window.history.back();
-  };
-
-  goForward = (event) => {
-    event.preventDefault();
-    window.history.forward();
-  };
-
-  goHome = (event) => { // Tambahkan ini
-    event.preventDefault();
-    window.location.href = '/'; // Ganti dengan URL beranda Anda jika perlu
-  };
 
   render() {
     return (
@@ -57,7 +32,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a id="goBackLink" style={{ cursor: 'pointer' }}>
+                        <a href="#" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.back(); }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -66,7 +41,7 @@ export default class MyDocument extends Document {
                             </div>
                             <div className="navtext-bottom">
                               <h3 className="navtitlebot">
-                                  <span>Back</span>
+                                <span>Back</span>
                               </h3>
                             </div>
                           </div>
@@ -79,7 +54,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a id="goHomeLink" style={{ cursor: 'pointer' }}> {/* Tambahkan ini */}
+                        <a href="/" style={{ cursor: 'pointer' }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -88,7 +63,7 @@ export default class MyDocument extends Document {
                             </div>
                             <div className="navtext-bottom">
                               <h3 className="navtitlebot">
-                                  <span>Beranda</span>
+                                <span>Beranda</span>
                               </h3>
                             </div>
                           </div>
@@ -101,7 +76,7 @@ export default class MyDocument extends Document {
                   <div className="mev1">
                     <div className="mev2">
                       <div className="mev-container">
-                        <a id="goForwardLink" style={{ cursor: 'pointer' }}>
+                        <a href="#" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); window.history.forward(); }}>
                           <div className="text-center">
                             <div className="navicon-bottom">
                               <span className="navconbot">
@@ -110,7 +85,7 @@ export default class MyDocument extends Document {
                             </div>
                             <div className="navtext-bottom">
                               <h3 className="navtitlebot">
-                                  <span>Forward</span>
+                                <span>Forward</span>
                               </h3>
                             </div>
                           </div>
