@@ -21,6 +21,25 @@ export default class MyDocument extends Document {
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
 
+            <script>
+              // Mengambil elemen dengan kelas yang diberikan
+              const element = document.querySelector('.notion-list-item.notion-page-link');
+
+              // Fungsi untuk menghilangkan kelas selama satu detik
+              function hideClassForOneSecond() {
+                // Menghilangkan kelas
+                element.classList.remove('notion-list-item', 'notion-page-link');
+                // Menunggu satu detik
+                setTimeout(() => {
+                  // Menambahkan kelas kembali setelah satu detik
+                  element.classList.add('notion-list-item', 'notion-page-link');
+                }, 1000); // 1000 milidetik = 1 detik
+              }
+
+              // Memanggil fungsi untuk menghilangkan dan menampilkan kembali kelas
+              hideClassForOneSecond();
+            </script>
+
           </Head>
           <body>
 
