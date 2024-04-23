@@ -102,9 +102,9 @@ export default class MyDocument extends Document {
   var element = document.querySelector('.' + className);
   
   function hideClassForOneSecond() {
-    element.classList.remove(className);
+    element.style.display = 'none'; // Sembunyikan elemen dengan display: none;
     setTimeout(function() {
-      element.classList.add(className);
+      element.style.display = 'block'; // Tampilkan kembali elemen dengan display: block;
     }, 1000);
   }
 
@@ -118,6 +118,7 @@ export default class MyDocument extends Document {
 `
   }}
 />
+
 
 
             <script
