@@ -95,24 +95,30 @@ export default class MyDocument extends Document {
             </section>
 
             <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    (function () {
-                      var className = 'notion-list-item.notion-page-link';
-                      var element = document.querySelector('.' + className);
-                      
-                      function hideClassForOneSecond() {
-                        element.classList.remove(className);
-                        setTimeout(function() {
-                          element.classList.add(className);
-                        }, 1000);
-                      }
-                    
-                      hideClassForOneSecond();
-                    })();
-                    `
-                }}
-            />
+  dangerouslySetInnerHTML={{
+    __html: `
+(function () {
+  var className = 'notion-list-item.notion-page-link';
+  var element = document.querySelector('.' + className);
+  
+  function hideClassForOneSecond() {
+    element.classList.remove(className);
+    setTimeout(function() {
+      element.classList.add(className);
+    }, 1000);
+  }
+
+  hideClassForOneSecond(); // Panggil fungsi untuk pertama kali
+
+  // Tambahkan event listener untuk handle event saat halaman dimuat atau direload
+  window.addEventListener('load', function() {
+    hideClassForOneSecond(); // Panggil fungsi setiap kali halaman dimuat atau direload
+  });
+})();
+`
+  }}
+/>
+
 
             <script
               dangerouslySetInnerHTML={{
