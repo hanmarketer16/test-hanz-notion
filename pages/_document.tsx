@@ -95,33 +95,6 @@ export default class MyDocument extends Document {
             </section>
 
             <script
-  dangerouslySetInnerHTML={{
-    __html: `
-(function () {
-  var className = 'notion-list-item.notion-page-link';
-  var element = document.querySelector('.' + className);
-  
-  function hideClassForOneSecond() {
-    element.style.display = 'none'; // Sembunyikan elemen dengan display: none;
-    setTimeout(function() {
-      element.style.display = 'block'; // Tampilkan kembali elemen dengan display: block;
-    }, 1000);
-  }
-
-  hideClassForOneSecond(); // Panggil fungsi untuk pertama kali
-
-  // Tambahkan event listener untuk handle event saat halaman dimuat atau direload
-  window.addEventListener('load', function() {
-    hideClassForOneSecond(); // Panggil fungsi setiap kali halaman dimuat atau direload
-  });
-})();
-`
-  }}
-/>
-
-
-
-            <script
               dangerouslySetInnerHTML={{
                 __html: `
 /** Inlined version of noflash.js from use-dark-mode */
