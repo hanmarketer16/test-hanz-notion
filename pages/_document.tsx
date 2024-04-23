@@ -95,6 +95,26 @@ export default class MyDocument extends Document {
             </section>
 
             <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    (function () {
+                      var className = 'notion-list-item.notion-page-link';
+                      var element = document.querySelector('.' + className);
+                      
+                      function hideClassForOneSecond() {
+                        element.classList.remove(className);
+                        setTimeout(function() {
+                          element.classList.add(className);
+                        }, 1000);
+                      }
+                    
+                      hideClassForOneSecond();
+                    })();
+                    `
+                }}
+            />
+
+            <script
               dangerouslySetInnerHTML={{
                 __html: `
 /** Inlined version of noflash.js from use-dark-mode */
