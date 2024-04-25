@@ -585,6 +585,9 @@
 b {
   font-family: Ubiquity Nova, Proxima Nova, Avenir, sans-serif;
 }
+.dark-mode video.notion-page-cover {
+  display: none;
+}
 @media (max-width: 1024px) {
 
 }
