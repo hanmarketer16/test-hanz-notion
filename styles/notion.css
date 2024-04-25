@@ -422,6 +422,7 @@
   padding-top: 0;
   text-align: center;
   margin-top: 0;
+  font-family: Ubiquity Nova, Proxima Nova, Avenir, sans-serif;
 }
 .notion-spacer {
   width: calc(min(15px, 4vw));
@@ -580,6 +581,9 @@
 }
 .notion-collection-page-properties {
   display: none !important;
+}
+b {
+  font-family: Ubiquity Nova, Proxima Nova, Avenir, sans-serif;
 }
 @media (max-width: 1024px) {
 
